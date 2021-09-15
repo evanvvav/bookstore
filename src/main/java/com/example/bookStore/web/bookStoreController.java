@@ -1,16 +1,15 @@
 package com.example.bookStore.web;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-
 public class bookStoreController {
 
-	@RequestMapping(value = "/bookStoreIndex", method = RequestMethod.GET)
-	public String hello() {
-		return "bookStoreIndex";
+	@GetMapping("/index")
+	public String getIndex(Model model) {
+		return "index";
 	}
 
 }
